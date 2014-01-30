@@ -13,7 +13,7 @@ Next include you're documents script which should typically define a function su
 function comment(){
 //retrieve comment text
 //validate the comment
-//PUT to you're application server or where ever you're store is running to //persist the new comment from the client
+//PUT to you're application server or where ever you're store is running to persist the new comment from the client
 
 var payload = {text: commentText, commentContext: .., author: ..};
 global_sock.emit('comment', payload); 
