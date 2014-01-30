@@ -3,7 +3,7 @@ comment_engine
 
 Real time comment engine. Using socket.io implementing web socket protocol or fallback to Comet running on node.js to push new comments to connected clients viewing the same document.
 
-When using comment_engine in conjuction with another application (typical case) you should run the node.js server on a seperate port from the port you're application wev server is running on (:80).
+When using comment_engine in conjuction with another application (typical case) you should run the node.js server on a seperate port from the port you're application web server is running on (:80).
 
 client
 =====
