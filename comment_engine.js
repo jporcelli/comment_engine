@@ -34,7 +34,4 @@ function comment_engineOnReady() {
 
 		comment.addToList(commentList);
 	});
-}
-
-
-$(document).ready(comment_engineOnReady);
+};
