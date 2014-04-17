@@ -1,5 +1,5 @@
 /**
- * Comment engine client for node.js/socket.io/redis
+ * Comment engine client for node.js/socket.io
  * enabled comment engine server for real time comment
  * updates for clients.
  *
