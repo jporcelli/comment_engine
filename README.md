@@ -9,9 +9,6 @@ Include the <script src="host:port/socket.io/socket.io.js, just as described on 
 
 Next include you're documents script which should typically define a function such as,
   
-  /**
-   * Function in script for document you wish to enable real time commenting from
-   */
   function comment(){
   
     // retrieve comment text from the DOM
