@@ -8,22 +8,28 @@ client
 Include the <script src="host:port/socket.io/socket.io.js, just as described on socket.io.
 
 Next include you're documents script which should typically define a function such as,
-function comment(){
-//retrieve comment text
-//validate the comment
-//PUT to you're application server or where ever you're store is running to persist the new comment from the client
-
-var payload = {text: commentText, commentContext: .., author: ..};
-global_sock.emit('comment', payload); 
-};
+  
+  /**
+   * Function in script for document you wish to enable real time commenting from
+   */
+  function comment(){
+  
+    // retrieve comment text from the DOM
+    // validate the comment
+    // PUT to you're application server or where ever you're store is running to persist the new comment from the client
+    
+    var payload = {text: commentText, commentContext: .., author: ..};
+    global_sock.emit('comment', payload); 
+  }
 
 Modify comment_engine.js
 =====================
-Typically a comment is associated with a room, or in general lets call it a context. Obtain this context identifier and modify line 22,
+Typically a comment is associated with a room, or in general lets call it a context. Obtain this context identifier and modify line 22, by replacing CONTEXT_ID with the unique room identifier of your choice
 
-socket.emit('subscribe', {room: CONTEXT_ID});
+  socket.emit('subscribe', {room: CONTEXT_ID});
 
 this will associate each client that connects to the server with the context with which they are currently associated. i.e viewing a certain blog entry, article, etc.
+
 Each context should be a distinct document so any clients viewing the same document will therefore be associated 'subscribed' to the same room and will receive real time comment updates made by other clients, and other clients will see their comments in real time.
 
 TRY IT
