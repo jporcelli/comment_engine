@@ -1,7 +1,7 @@
 comment_engine
 ==============
 
-Real time comment engine. Using socket.io implementing web socket protocol or fallback to Comet running on node.js to push new comments to connected clients viewing the same document.
+Real time comment engine. Using socket.io running on node.js
 
 client
 =====
